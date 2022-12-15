@@ -1,0 +1,32 @@
+int nums[]= {2,6,1,9,4,5,3};
+		int max=0;
+		HashSet<Integer> set=new HashSet<>();
+		for(int i=0;i<nums.length;i++)
+		{
+			set.add(nums[i]);
+		}
+		for(int i=0;i<nums.length;i++)
+		{
+			if(set.contains(nums[i]-1))
+			{
+				continue;
+			}
+			else
+			{
+				int count=1;
+				int sum=nums[i]+1;
+				while(set.contains(sum))
+				{
+					count++;
+					if(max<count)
+					{
+						max=count;
+					}
+					sum++;
+				}
+			}
+		}
+		System.out.println(max);
+	}
+
+}
