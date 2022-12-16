@@ -1,0 +1,22 @@
+int arr[]=  {1, 3, 5, 5, 5, 5, 7, 123, 125 };
+		int k=5;
+		int start=0,end=arr.length-1,startcount=0,endcount=0;
+		while(start<arr.length && end>=0)
+		{
+			if(startcount==0 && arr[start]==k)
+			{
+				System.out.println(start);
+				startcount++;
+				
+				
+			}
+			if(endcount==0 && arr[end]==k)
+			{
+				System.out.println(end);
+				endcount++;
+				
+			}
+			start++;
+			end--;
+		}
+		
