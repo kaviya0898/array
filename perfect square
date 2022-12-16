@@ -1,0 +1,15 @@
+int num=121;
+		int count=0;
+		for(int i=1;i*i<=num;i++)
+		{
+			if(num%i==0 && num/i==i)
+			{
+				System.out.println("yes");
+			}
+		}
+		for(int i=1;i*i<=num;i++)
+		{
+			count++;
+		}
+		System.out.println(count);
+		}
